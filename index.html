@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Pricing - Fractional Knapsack Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✈️ Airline Ticket Pricing</h1>
+        <p class="subtitle">Fractional Knapsack Greedy Algorithm</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label>Total Aircraft Seats:</label>
+                <input type="number" id="totalSeats" value="150" min="1">
+            </div>
+
+            <div id="fareClassesContainer">
+                <div class="fare-class-input">
+                    <input type="number" placeholder="Price ($)" value="500" min="0">
+                    <input type="number" placeholder="Max Seats" value="30" min="0">
+                    <button class="remove-btn" onclick="removeFareClass(this)">×</button>
+                </div>
+                <div class="fare-class-input">
+                    <input type="number" placeholder="Price ($)" value="300" min="0">
+                    <input type="number" placeholder="Max Seats" value="50" min="0">
+                    <button class="remove-btn" onclick="removeFareClass(this)">×</button>
+                </div>
+                <div class="fare-class-input">
+                    <input type="number" placeholder="Price ($)" value="150" min="0">
+                    <input type="number" placeholder="Max Seats" value="100" min="0">
+                    <button class="remove-btn" onclick="removeFareClass(this)">×</button>
+                </div>
+            </div>
+
+            <button class="add-btn" onclick="addFareClass()">+ Add Fare Class</button>
+            <button class="calculate-btn" onclick="calculate()">Calculate Optimal Pricing</button>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h2>Greedy Algorithm Steps</h2>
+            <div id="steps"></div>
+
+            <div class="visualization">
+                <h3>Seat Allocation Visualization</h3>
+                <div id="seatChart"></div>
+            </div>
+
+            <div class="summary">
+                <h3>Summary</h3>
+                <div id="summaryContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

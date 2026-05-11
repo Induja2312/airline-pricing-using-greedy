@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.input-section {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.fare-class-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 40px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.fare-class-input input {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.remove-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background: #ff3838;
+}
+
+.add-btn, .calculate-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.add-btn {
+    background: #5f27cd;
+    color: white;
+}
+
+.add-btn:hover {
+    background: #341f97;
+}
+
+.calculate-btn {
+    background: #00d2d3;
+    color: white;
+}
+
+.calculate-btn:hover {
+    background: #01a3a4;
+}
+
+.results {
+    margin-top: 30px;
+}
+
+.results.hidden {
+    display: none;
+}
+
+.results h2, .results h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#steps {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #ffc107;
+    margin-bottom: 25px;
+}
+
+.step {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.step-header {
+    font-weight: 600;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+
+.step-detail {
+    color: #555;
+    margin-left: 15px;
+}
+
+.visualization {
+    margin: 25px 0;
+}
+
+#seatChart {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bar-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 180px;
+    align-items: center;
+    gap: 12px;
+}
+
+.seat-bar {
+    height: 36px;
+    background: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.seat-fill {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 1s ease;
+}
+
+.seat-label {
+    font-weight: 700;
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: right;
+}
+
+.seat-value {
+    color: #333;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.summary {
+    background: #d4edda;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #28a745;
+}
+
+.summary-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.summary-value {
+    color: #28a745;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.total-revenue {
+    font-size: 1.5em !important;
+    color: #155724 !important;
+}
